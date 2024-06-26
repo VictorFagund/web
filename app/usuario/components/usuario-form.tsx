@@ -73,24 +73,6 @@ export function UsuarioForm({ usuario }: { usuario: TUsuario }) {
           />
         </div>
 
-        <div className="flex gap-4">
-          <FormField
-            name="tipo"
-            control={form.control}
-            render={({ field }) => (
-              <FormItem className="flex-1">
-                <FormLabel>Tipo de usuário</FormLabel>
-
-                <FormControl>
-                  <Input {...field} />
-                </FormControl>
-
-                <Error value={form.formState.errors?.tipo?.message} />
-              </FormItem>
-            )}
-          />
-        </div>
-
         <div className="flex justify-end">
           <Button size="sm" disabled={isPending}>
             {isPending && <Loader size={18} className="mr-2 animate-spin" />}
